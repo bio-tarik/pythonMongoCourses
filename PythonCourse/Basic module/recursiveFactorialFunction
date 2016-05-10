@@ -1,0 +1,9 @@
+def factorial(number):
+    if number <= 1:
+        return 1
+    else:
+        return number * factorial(number-1)
+        
+userInput = eval(input("Type a non negative integer to get the factorial of it "))
+
+print(factorial(userInput))

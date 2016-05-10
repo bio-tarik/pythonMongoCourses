@@ -1,0 +1,17 @@
+#Prints the Nth number of the Fibonacci sequence
+def findbonacci(desiredPos, fibonacciSequence = [0,1]):
+    
+    if desiredPos <= 0:
+        return 0
+    
+    fibonacciSequence.append(fibonacciSequence[len(fibonacciSequence) - 1] + fibonacciSequence[len(fibonacciSequence) - 2])
+    
+    if desiredPos >= len(fibonacciSequence):
+        findbonacci(desiredPos, fibonacciSequence)
+    
+    return fibonacciSequence[desiredPos]
+    
+
+userInput = eval(input("Type a positive integer to get its corresponding position in the fibonacci sequence: "))
+
+print(findbonacci(userInput))

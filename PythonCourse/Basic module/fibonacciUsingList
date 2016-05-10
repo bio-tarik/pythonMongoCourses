@@ -1,0 +1,13 @@
+def findbonacci(desiredPos):
+    terms = [0,1]
+    i = 2
+    
+    while i <= desiredPos:
+        terms.append(terms[i-1] + terms[i-2])
+        i += 1
+    
+    return terms[desiredPos]    
+
+userInput = eval(input("Type a positive integer to get its corresponding position in the fibonacci sequence: "))
+
+print(findbonacci(userInput))

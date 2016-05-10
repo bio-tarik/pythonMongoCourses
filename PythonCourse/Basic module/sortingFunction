@@ -1,0 +1,24 @@
+def listSortingFunction(userList):
+    
+    for number in userList:
+        aux = number
+        for number2 in userList:
+            if userList.index(number2) > userList.index(number) and number2 < aux :
+                aux = number2
+                
+        userList[userList.index(aux)] = number
+        userList[userList.index(number)] = aux
+
+    return userList
+
+
+originalList = [5,7,1,3,63,-1,4,0]    
+
+print("Original list:")
+print(originalList)
+
+print("Calling sorting function")
+originalList = listSortingFunction(originalList)
+
+print("Sorted list:")
+print(originalList)

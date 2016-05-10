@@ -1,0 +1,3 @@
+-> to start mongodb service, use ./mongod
+-> to connect to the mongo server, use mongo command
+-> before turning off the vm, stop the process via the "use admin" and then "db.shutdownServer()" commands
